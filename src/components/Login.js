@@ -8,7 +8,7 @@ const Login = () => {
   const [legajo, setLegajo] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-//const navigate = useNavigate();
+  const navigate = useNavigate();
 
 const handleLogin = async () => {
     try {
@@ -26,10 +26,10 @@ const handleLogin = async () => {
       if (response.status === 200) {
         const data = response.data.data;
   
-        localStorage.setItem('legajo', legajo);
-        localStorage.setItem('usuario', data.nombre);
-  
-        //navigate('/home'); 
+        localStorage.setItem('legajo', data.legajo);
+        localStorage.setItem('nombre', data.nombre);
+        localStorage.setItem('apellido', data.apellido);
+        navigate('/home/tarea'); 
       } else {
         setError('Error en los datos, por favor verifique los datos ingresados');
       }

@@ -51,7 +51,7 @@ h3 {
   background-color: #e60012;
   border-color: #e60012;
   color: white;
-  width: 100%; /* Make button full width */
+  width: 100%; 
 }
 
 .btn-primary:hover {
